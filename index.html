@@ -1,1 +1,312 @@
-<h1>MirrorMind Coming Soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MirrorMind — Coming Soon</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #080808;
+  color: #e8e4d8;
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  overflow: hidden;
+}
+
+/* Glow background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,183,0,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.container {
+  text-align: center;
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo eye */
+.logo-wrap {
+  margin-bottom: 40px;
+}
+
+.logo-wrap svg {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 12px rgba(255,183,0,0.3));
+}
+
+/* Coming soon label */
+.label {
+  font-family: 'Outfit', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #ffb700;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Main heading */
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 12vw, 72px);
+  font-weight: 300;
+  line-height: 1;
+  color: #f5f0e0;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+h1 span {
+  color: #ffb700;
+  font-style: italic;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,183,0,0.5);
+  margin-bottom: 40px;
+}
+
+/* Divider */
+.line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffb700, transparent);
+  margin: 0 auto 40px;
+}
+
+/* Description */
+.desc {
+  font-size: 15px;
+  color: #7a7668;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.desc strong {
+  color: #e8e4d8;
+  font-weight: 600;
+}
+
+/* What you get */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(255,183,0,0.04);
+  border: 1px solid rgba(255,183,0,0.1);
+  border-radius: 6px;
+}
+
+.feature-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.feature-text {
+  font-size: 14px;
+  color: #9a9588;
+  line-height: 1.5;
+}
+
+.feature-text strong {
+  color: #e8e4d8;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+/* CTA */
+.cta-label {
+  font-size: 12px;
+  color: #7a7668;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #ffb700;
+  color: #080808;
+}
+
+.btn-primary:hover {
+  background: #ffcc44;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffb700;
+  border: 1px solid rgba(255,183,0,0.3);
+}
+
+.btn-secondary:hover {
+  border-color: #ffb700;
+  background: rgba(255,183,0,0.05);
+}
+
+/* Price pill */
+.price-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,183,0,0.08);
+  border: 1px solid rgba(255,183,0,0.2);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #ffb700;
+  margin-bottom: 32px;
+}
+
+.price-pill span {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Footer */
+footer {
+  margin-top: 56px;
+  font-size: 11px;
+  color: #3a3830;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffcc44"/>
+          <stop offset="100%" stop-color="#ff8c00"/>
+        </linearGradient>
+      </defs>
+      <!-- Mirror frame -->
+      <path d="M40 8 C55 8 66 17 66 32 L66 56 C66 63 61 68 55 71 L42 76 C41 76 39 76 38 76 L25 71 C19 68 14 63 14 56 L14 32 C14 17 25 8 40 8 Z" fill="none" stroke="url(#g)" stroke-width="2"/>
+      <!-- Divider -->
+      <line x1="16" y1="42" x2="64" y2="42" stroke="rgba(255,183,0,0.3)" stroke-width="0.8" stroke-dasharray="3,2"/>
+      <!-- Top eye -->
+      <ellipse cx="40" cy="32" rx="14" ry="8" fill="none" stroke="url(#g)" stroke-width="1.5"/>
+      <circle cx="40" cy="32" r="4" fill="#ffb700"/>
+      <circle cx="40" cy="32" r="2" fill="#080808"/>
+      <!-- Bottom reflection -->
+      <ellipse cx="40" cy="52" rx="14" ry="8" fill="none" stroke="rgba(255,183,0,0.25)" stroke-width="1"/>
+      <circle cx="40" cy="52" r="4" fill="rgba(255,183,0,0.15)"/>
+    </svg>
+  </div>
+
+  <p class="label">Coming Soon</p>
+
+  <h1>Mirror<span>Mind</span></h1>
+  <p class="tagline">See the data. Understand the future.</p>
+
+  <div class="line"></div>
+
+  <p class="desc">
+    Your YouTube and Instagram data reveals more about you than you realise.<br><br>
+    <strong>We show you what it says.</strong>
+  </p>
+
+  <div class="price-pill">
+    Early access for <span>₹999</span>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <span class="feature-icon">🪞</span>
+      <div class="feature-text">
+        <strong>Deep Personal Analysis</strong>
+        Your YouTube + Instagram data analysed for hidden patterns about your personality, habits, and direction.
+      </div>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">💡</span>
+      <div class="feature-text">
+        <strong>Brutally Honest Insights</strong>
+        Not motivational. Not soft. Real findings about what your data actually says about you.
+      </div>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">🔒</span>
+      <div class="feature-text">
+        <strong>100% Private</strong>
+        Your data is processed and deleted immediately. We never store or share anything.
+      </div>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">📄</span>
+      <div class="feature-text">
+        <strong>Premium HTML Report</strong>
+        A beautifully designed personal report delivered within 48 hours.
+      </div>
+    </div>
+  </div>
+
+  <p class="cta-label">Want early access? Reach out now.</p>
+
+  <div class="cta-buttons">
+    <a href="https://instagram.com/mirrormind.in" class="btn btn-primary">Follow on Instagram</a>
+    <a href="mailto:mirrormind.in@gmail.com" class="btn btn-secondary">Email Us</a>
+  </div>
+
+</div>
+
+<footer>mirrormind.co.in &nbsp;·&nbsp; Nagpur, India &nbsp;·&nbsp; 2026</footer>
+
+</body>
+  </html>
+  
